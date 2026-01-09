@@ -1,0 +1,571 @@
+@extends('layouts.app')
+
+@section('title', "Jethro's Portfolio")
+
+@section('content')
+<div class="bg-[#f7f9f2]">
+
+<!-- NAVBAR -->
+<header class="w-full fixed top-0 left-0 z-20 bg-[#f7f9f2]/90 backdrop-blur py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10">
+        <div class="text-xl font-bold text-[#223322]">Jethro J. Manzanillo</div>
+
+        <!-- DESKTOP NAV LINKS -->
+        <nav class="hidden md:flex space-x-8 font-medium text-[#223322]">
+            <a href="#about" class="nav-link hover:text-[#50C878] transition">About</a>
+            <a href="#skills" class="nav-link hover:text-[#50C878] transition">Skills</a>
+            <a href="#education" class="nav-link hover:text-[#50C878] transition">Education</a>
+            <a href="#works" class="nav-link hover:text-[#50C878] transition">Works</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-[#223322] focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#f7f9f2]/90 backdrop-blur py-4 px-6 space-y-4 text-center">
+        <a href="#about" class="nav-link block hover:text-[#50C878] transition">About</a>
+        <a href="#skills" class="nav-link block hover:text-[#50C878] transition">Skills</a>
+        <a href="#education" class="nav-link block hover:text-[#DFA381] transition">Education</a>
+        <a href="#works" class="nav-link block hover:text-[#50C878] transition">Works</a>
+    </div>
+    
+</header>
+
+
+
+
+    <!-- HERO FRAME -->
+    <section id="about" class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 pt-10">
+        <div class="w-full md:max-w-10xl mx-auto">
+            <div class="relative rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col items-center">
+                
+                <!-- BACKGROUND IMAGE -->
+                <img src="{{ asset('images/edit1.png') }}"
+                     alt="Hero background"
+                     class="absolute inset-0 w-full h-full object-cover scale-105 blur-sm">
+
+                <!-- DARK OVERLAY -->
+                <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 rounded-[2.5rem]"></div>
+
+                <!-- CONTENT -->
+                <div class="relative py-20 px-8 md:px-16 flex flex-col items-center z-10">
+                    <div class="w-55 h-55 rounded-full overflow-hidden bg-gradient-to-br from-[#9e763b] to-[#9e8143] p-1 mb-8">
+                        <img src="{{ asset('images/idpicture.jpg') }}"
+                             alt="Jethro Manzanillo"
+                             class="w-full h-full object-cover rounded-full">
+                    </div>
+
+                    <div class="text-center text-[#261912]">
+                        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                            Hi, I’m <span class="text-[#E8F6E8]">Jethro.</span>
+                        </h1>
+                        <p class="mt-4 md:mt-6 text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto">
+                            A BS Information Technology student, <span class="text-[#DFA381] font-medium">Artist</span>, and aspiring
+                            <span class="text-[#DFA381] font-medium">UI/UX & Graphic Designer</span>. <!-- subtle peach highlight -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SEPARATOR -->
+<div class="w-full h-16 bg-gradient-to-b from-[#f7f9f2] to-white"></div>
+
+    <!-- SUMMARY -->
+<section id="summary" class="py-16 md:py-20 px-6 md:px-10 bg-[#f7f9f2] relative overflow-hidden">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        
+        <!-- Left side: Intro -->
+        <div class="md:w-1/2 relative">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#DFA381]/20 rounded-full mix-blend-multiply animate-pulse-slow"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#223322] mb-6">
+                About Me
+            </h2>
+            <p class="text-[#4A5C4A] leading-relaxed">
+                B.S. Information Technology student passionate about front-end development and UI/UX design.
+                I craft responsive web interfaces and engaging visuals, while continuously learning and collaborating effectively.
+            </p>
+        </div>
+
+        <!-- Right side: Highlights / Skills -->
+        <div class="md:w-1/2 grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                <h4 class="font-semibold text-[#223322] mb-2">Front-End Dev</h4>
+                <p class="text-xs text-gray-600">HTML, CSS, Tailwind, JavaScript & Alpine.js</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                <h4 class="font-semibold text-[#223322] mb-2">UI/UX Design</h4>
+                <p class="text-xs text-gray-600">Figma & user-centered design</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                <h4 class="font-semibold text-[#223322] mb-2">Digital Art</h4>
+                <p class="text-xs text-gray-600">Original illustrations & graphics</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                <h4 class="font-semibold text-[#223322] mb-2">Collaboration</h4>
+                <p class="text-xs text-gray-600">Teamwork, adaptability, and time management</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- SKILLS SECTION -->
+<section id="skills" class="py-16 md:py-20 px-6 md:px-10 bg-[#f7f9f2]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#223322] mb-16 text-center">
+            Skills 
+        </h2>
+
+        <!-- TWO CARDS UNDERNEATH -->
+        <div class="grid gap-12 md:grid-cols-2 mt-12">
+
+            <!-- TECHNICAL SKILLS CARD -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transition duration-300 border-t-8 border-[#DFA381]">
+                <h3 class="text-xl font-bold text-[#223322] mb-6">Technical Skills</h3>
+                <div class="flex flex-wrap gap-3">
+                    @foreach ([
+                        'Web Development',
+                        'Front-End Development',
+                        'Web Design',
+                        'Digital Illustration',
+                        'Graphic Design',
+                        'UI/UX Design'
+                    ] as $skill)
+                        <span class="bg-[#DFA381]/30 text-[#223322] px-4 py-2 rounded-full font-medium text-sm hover:bg-[#DFA381]/50 transition">
+                            {{ $skill }}
+                        </span>
+                    @endforeach
+                </div>
+            </div>
+
+            <!-- SOFT SKILLS CARD -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transition duration-300 border-t-8 border-[#50C878]">
+                <h3 class="text-xl font-bold text-[#223322] mb-6">Soft Skills</h3>
+                <div class="flex flex-wrap gap-3">
+                    @foreach ([
+                        'Freelance Experience',
+                        'Self-Motivated',
+                        'Willingness to Learn',
+                        'Adaptability',
+                        'Time Management',
+                        'Collaboration',
+                        'Creativity',
+                        'Attention to Detail'
+                    ] as $skill)
+                        <span class="bg-[#50C878]/20 text-[#223322] px-4 py-2 rounded-full font-medium text-sm hover:bg-[#50C878]/40 transition">
+                            {{ $skill }}
+                        </span>
+                    @endforeach
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECTION SEPARATOR -->
+<div class="w-full h-16 bg-gradient-to-b from-[#f7f9f2] to-white"></div>
+
+           <!-- TOOLS & PLATFORMS -->
+<section id="tools" class="py-12 md:py-16 px-6 md:px-10 bg-[#f7f9f2]">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-[#223322] mb-12">
+            Tools & Platforms
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 justify-items-center">
+            @foreach ([
+                ['name'=>'Figma','icon'=>'https://cdn.simpleicons.org/figma'],
+                ['name'=>'HTML5 / Tailwind','icon'=>'https://cdn.simpleicons.org/html5'],
+                ['name'=>'Laravel','icon'=>'https://cdn.simpleicons.org/laravel'],
+                ['name'=>'PHP','icon'=>'https://cdn.simpleicons.org/php'],
+                ['name'=>'JavaScript','icon'=>'https://cdn.simpleicons.org/javascript'],
+                ['name'=>'Alpine.js','icon'=>'https://cdn.simpleicons.org/alpinedotjs'],
+                ['name'=>'MySQL','icon'=>'https://cdn.simpleicons.org/mysql'],
+                ['name'=>'GitHub','icon'=>'https://cdn.simpleicons.org/github'],
+                ['name'=>'VS Code','icon'=>asset('images/vscode.png')],
+                ['name'=>'Canva','icon'=>asset('images/canva.png')],
+                ['name'=>'CapCut','icon'=>asset('images/capcut.png')]
+            ] as $tool)
+                <div class="flex flex-col items-center gap-3 w-32 sm:w-36 md:w-40">
+                    <img src="{{ $tool['icon'] }}" 
+                         alt="{{ $tool['name'] }} Logo"
+                         class="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain hover:scale-110 transition-transform duration-300">
+                    <span class="text-sm sm:text-base font-semibold text-[#223322]">{{ $tool['name'] }}</span>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- SECTION SEPARATOR -->
+<div class="w-full h-16 bg-gradient-to-b from-[#f7f9f2] to-white"></div>
+
+    <!-- EDUCATION SECTION -->
+<section id="education" class="py-16 md:py-20 px-6 md:px-10 bg-[#f7f9f2]">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#223322] mb-16 text-center">
+            Education
+        </h2>
+
+        <div class="relative border-l-2 border-[#50C878] pl-8 space-y-16">
+
+            <!-- SCHOOL ITEM 1 -->
+            <div class="relative group">
+                <span class="absolute -left-[11px] top-4 w-6 h-6 rounded-full bg-[#50C878] border-4 border-[#f7f9f2] transition group-hover:scale-110"></span>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+
+                    <!-- School Name -->
+                    <div class="bg-[#DFA381]/20 px-6 py-4 pt-7 pl-10">
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-[#223322] mb-0">
+                            Bicol University
+                        </h3>
+                    </div>
+
+                    <div class="px-6 py-6">
+                        <p class="text-[#4A5C4A] font-semibold">Bachelor of Science in Information Technology</p>
+                        <p class="mt-1 text-sm text-gray-500">2021 – Present</p>
+
+                        <!-- Activities & Projects -->
+                        <h4 class="mt-6 font-semibold text-[#223322]">Activities & Projects</h4>
+                        <div class="grid md:grid-cols-2 gap-4 mt-3">
+                            <div>
+                                <p class="font-medium text-sm">Scientia Publication Online | 2023-Present</p>
+                                <p class="text-xs text-gray-600 mt-1">Contributed articles, layouts, and graphics for the official publication of Bicol University College of Science.</p>
+                                <div class="flex flex-wrap gap-2 mt-1">
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Editorial</span>
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">UI/UX</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium text-sm">Original Digital Artworks</p>
+                                <p class="text-xs text-gray-600 mt-1">Created original digital illustrations and designs for personal and academic projects.</p>
+                                <div class="flex flex-wrap gap-2 mt-1">
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Digital Art</span>
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Graphic Design</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium text-sm">Edited Short-form Videos</p>
+                                <p class="text-xs text-gray-600 mt-1">Produced and edited short videos to enhance storytelling and visual content.</p>
+                                <div class="flex flex-wrap gap-2 mt-1">
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Video Editing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications & Awards -->
+                        <h4 class="mt-6 font-semibold text-[#223322]">Certifications & Awards</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-[#DFA381]/30 text-[#223322] px-3 py-1 rounded-full text-sm font-medium">Certificate of Recognition – Publication Staffer</span>
+                            <span class="bg-[#DFA381]/30 text-[#223322] px-3 py-1 rounded-full text-sm font-medium">Dean’s Lister | 2023-2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCHOOL ITEM 2 -->
+            <div class="relative group">
+                <span class="absolute -left-[11px] top-4 w-6 h-6 rounded-full bg-[#50C878] border-4 border-[#f7f9f2] transition group-hover:scale-110"></span>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+
+                    <!-- School Name -->
+                    <div class="bg-[#DFA381]/20 px-6 py-4 pt-7 pl-10">
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-[#223322] mb-0">
+                            Pio Duran National High School
+                        </h3>
+                    </div>
+
+                    <div class="px-6 py-6">
+                        <p class="text-[#4A5C4A] font-semibold">Junior & Senior High School</p>
+                        <p class="mt-1 text-sm text-gray-500">2017 – 2021</p>
+
+                        <h4 class="mt-6 font-semibold text-[#223322]">Activities & Projects</h4>
+                        <div class="grid md:grid-cols-2 gap-4 mt-3">
+                            <div>
+                                <p class="font-medium text-sm">Editorial Cartooning – RSPC 2019</p>
+                                <p class="text-xs text-gray-600 mt-1">Created editorial cartoons that competed in the Regional Schools Press Conference (Filipino Category).</p>
+                                <div class="flex flex-wrap gap-2 mt-1">
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Editorial</span>
+                                    <span class="bg-[#DFA381]/30 text-[#223322] px-2 py-1 rounded-full text-xs font-medium">Art</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-6 font-semibold text-[#223322]">Academic Awards</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-[#DFA381]/30 text-[#223322] px-3 py-1 rounded-full text-sm font-medium">With High Honor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCHOOL ITEM 3 -->
+            <div class="relative group">
+                <span class="absolute -left-[11px] top-4 w-6 h-6 rounded-full bg-[#50C878] border-4 border-[#f7f9f2] transition group-hover:scale-110"></span>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+
+                    <!-- School Name -->
+                    <div class="bg-[#DFA381]/20 px-6 py-4 pt-7 pl-10">
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-[#223322] mb-0">
+                            Don Jose Pavia Central School
+                        </h3>
+                    </div>
+
+                    <div class="px-6 py-6">
+                        <p class="text-[#4A5C4A] font-semibold">Elementary Education</p>
+                        <p class="mt-1 text-sm text-gray-500">2011 – 2016</p>
+
+                        <h4 class="mt-6 font-semibold text-[#223322]">Academic Awards</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-[#DFA381]/30 text-[#223322] px-3 py-1 rounded-full text-sm font-medium">With Honor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="w-full h-16 bg-gradient-to-b from-[#f7f9f2] to-white"></div>
+
+    <!-- WORKS FRAME -->
+<section id="works" class="py-16 md:py-20 px-6 md:px-10" x-data="projectsCarousel()">
+    <div class="w-full max-w-5xl mx-auto relative">
+
+        <h2 class="text-3xl font-bold text-[#223322] mb-12 text-center">
+            My Works
+        </h2>
+
+        <!-- Project Display -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-auto relative p-6 sm:p-8">
+
+            <!-- Next Button Top Right -->
+            <div class="absolute top-4 right-4 z-10">
+                <button @click="next()" class="bg-[#DFA381] text-white px-4 py-2 rounded-full hover:bg-[#554517] transition shadow">
+                    Next →
+                </button>
+            </div>
+
+            <!-- Projects -->
+            <template x-for="(project, index) in projects" :key="index">
+                <div x-show="currentIndex === index"
+                     x-cloak
+                     x-transition:enter="transition ease-out duration-500"
+                     x-transition:enter-start="opacity-0 translate-x-10"
+                     x-transition:enter-end="opacity-100 translate-x-0"
+                     x-transition:leave="transition ease-in duration-500"
+                     x-transition:leave-start="opacity-100 translate-x-0"
+                     x-transition:leave-end="opacity-0 -translate-x-10"
+                     class="flex flex-col gap-4 relative">
+
+                    <!-- Project Title & Subtitle -->
+                    <h3 class="text-2xl font-semibold text-[#223322]" x-text="project.title"></h3>
+                    <p class="text-sm text-gray-500" x-text="project.subtitle"></p>
+
+                    <!-- Tech Tags -->
+                    <div class="flex flex-wrap gap-2 mt-2 text-xs">
+                        <template x-for="tech in project.tech" :key="tech">
+                            <span class="px-2 py-1 bg-[#F0E6D2] rounded-lg text-[#554517] font-medium text-[10px] hover:bg-[#DFA381] hover:text-white transition" x-text="tech"></span>
+                        </template>
+                    </div>
+
+                    <!-- Single Screenshot with uniform size -->
+                    <div class="mt-4 w-full flex justify-center">
+                        <img :src="project.screenshot" 
+                             class="rounded-lg shadow-md object-cover w-full sm:w-3/4 md:w-2/3 h-64">
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mt-4" x-text="project.description"></p>
+
+                    <!-- Key Features -->
+                    <ul class="list-disc ml-5 text-gray-600 mt-3 space-y-1">
+                        <template x-for="feature in project.features" :key="feature">
+                            <li x-text="feature"></li>
+                        </template>
+                    </ul>
+
+                    <!-- Role -->
+                    <p class="text-gray-500 mt-2"><strong>My Role:</strong> <span x-text="project.role"></span></p>
+
+                    <!-- Link -->
+                    <div class="mt-4">
+                        <a :href="project.link" target="_blank" class="text-[#DFA381] font-medium hover:underline block sm:inline-block" x-text="project.linkText"></a>
+                    </div>
+
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <!-- Alpine.js Carousel Script -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        function projectsCarousel() {
+            return {
+                currentIndex: 0,
+                projects: [
+                    {
+                        title: "Turo-Moko",
+                        subtitle: "E-Learning Platform • Full-Stack Web Application",
+                        tech: ["Laravel", "Livewire", "Tailwind CSS", "MySQL", "Responsive Design"],
+                        screenshot: "{{ asset('images/work1.png') }}",
+                        description: "Turomoko is a responsive e-learning platform that transforms classroom management for both students and teachers. It integrates course enrollment, interactive recitation tracking, scoring systems, and mobile-friendly dashboards to streamline learning processes.",
+                        features: [
+                            "Dynamic course and recitation tracking",
+                            "Interactive scoring system for teachers and students",
+                            "Searchable and filterable course content",
+                            "Mobile-first responsive design for all devices"
+                        ],
+                        role: "Full-Stack Developer, Frontend Lead, UI/UX Designer",
+                        link: "https://github.com/itsyxngshin/turo-moko",
+                        linkText: "View on GitHub"
+                    },
+                    {
+                        title: "DoughMain",
+                        subtitle: "Web Platform • UX/UI Design • Full-Stack Development • Laravel",
+                        tech: ["Laravel", "Livewire", "MySQL", "Responsive Design"],
+                        screenshot: "{{ asset('images/work2.png') }}",
+                        description: "DoughMain is a web-based marketplace designed to connect local bakeries with customers through a clean, user-friendly browsing and ordering experience. The platform focuses on showcasing products visually, simplifying product discovery, and ensuring smooth interaction across all devices. The interface emphasizes accessibility, mobile responsiveness, and consistency in design while supporting dynamic content updates through Livewire for a seamless user experience.",
+                        features: [
+                            "Product browsing with dynamic search and category filtering",
+                            "Bakery profiles with visual branding and product listings",
+                            "Responsive, mobile-first UI for all screen sizes",
+                            "Interactive product modals for quick viewing"
+                        ],
+                        role: "Full-Stack Developer, UI/UX Designer, Frontend Lead",
+                        link: "https://github.com/itsyxngshin/DoughMain",
+                        linkText: "View on GitHub"
+                    },
+                    {
+                        title: "SoundSync",
+                        subtitle: "Mobile App Concept • UX/UI Design",
+                        tech: ["Figma", "UX/UI Design", "Mobile App Concept", "Interactive Prototype", "Gesture Controls"],
+                        screenshot: "{{ asset('images/work3.png') }}",
+                        description: "SoundSync is a mobile app concept that reimagines how users interact with music devices. It features intuitive gesture-based controls, personalized EQ profiles, real-time battery monitoring, and an earphone tracking system, all presented in a highly interactive Figma prototype.",
+                        features: [
+                            "Gesture-based playback and settings control",
+                            "Customizable EQ profiles for personalized audio",
+                            "Real-time battery monitoring for connected devices",
+                            "Earphone tracker to locate lost devices",
+                            "Fully interactive Figma prototype"
+                        ],
+                        role: "UI/UX Designer, Mobile App Concept Developer",
+                        link: "https://www.figma.com/design/nksez8xuWyj4dbe3dvi9nC/SoundSync?node-id=2-35&t=kRcutoCYFfEGAXaJ-1",
+                        linkText: "View on Figma"
+                    }
+                ],
+                next() {
+                    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+                }
+            }
+        }
+    </script>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#281b13] py-12 px-6 text-[#E8F4E8]">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <!-- Contact Info -->
+        <div class="text-center md:text-left space-y-3">
+            <p class="font-semibold text-[#DFA381] text-lg">Get in Touch</p>
+            <p class="flex items-center justify-center md:justify-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#DFA381]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M2 3h20v18H2V3zm2 2v14h16V5H4zm8 3l-6 5h12l-6-5z"/>
+                </svg>
+                <a href="mailto:manzanillojethro@gmail.com" class="hover:text-[#50C878]">manzanillojethro@gmail.com</a>
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#DFA381]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z"/>
+                </svg>
+                <a href="tel:+639076409605" class="hover:text-[#50C878]">0907-640-9605</a>
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#DFA381]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.5c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99C18.34 21.12 22 16.99 22 12z"/>
+                </svg>
+                <a href="https://web.facebook.com/jethrojaysonmanzanillo" target="_blank" class="hover:text-[#50C878]">Jethro Jayson Manzanillo</a>
+            </p>
+        </div>
+
+        <!-- Rights / Disclaimer -->
+        <div class="text-center md:text-right text-sm space-y-1">
+            <p>© {{ date('Y') }} Jethro Manzanillo. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+
+
+</div>
+@endsection
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Mobile menu toggle
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll for all nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80, // navbar offset
+                    behavior: 'smooth'
+                });
+            }
+            // Close mobile menu after click
+            if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+        });
+    });
+
+    // Active link highlighting
+    const updateActiveNav = () => {
+        let scrollY = window.scrollY + 100; // adjust offset for fixed navbar
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                navLinks.forEach(link => link.classList.remove('text-[#DFA381]'));
+                const activeLink = document.querySelector(`.nav-link[href="#${section.id}"]`);
+                if (activeLink) activeLink.classList.add('text-[#DFA381]');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', () => {
+        updateActiveNav();
+
+        // Simple fade-in on load for body content
+        document.body.style.opacity = 0;
+        document.body.style.transition = 'opacity 1s ease';
+        requestAnimationFrame(() => {
+            document.body.style.opacity = 1;
+        });
+    });
+});
+</script>
